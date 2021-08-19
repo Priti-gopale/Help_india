@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/style.css" class="css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+     @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+
+* {
+  font-family: "Poiret One", cursive;
+  font-weight: bold;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+li,
+p,
+a {
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+.row {
+  margin: 0;
+}
+
+.navbar-style {
+  background-color: #f8f9fa;
+  box-shadow: 2px 4px 13px 1px rgba(8, 8, 8, 0.04);
+  
+}
+
+#logo {
+  display: initial;
+  font-weight: 600;
+  font-size: 3.5rem;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  color: #fd5c63;
+  text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.06);
+  padding-top: 1px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #525252;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  padding-left: 1.5rem;
+  font-size: 1.9rem;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #fd5c63;
+}
+
+/* our hero sections  */
+
+.hero-text h1 {
+  font-size: 5.5rem;
+  line-height: 1.5;
+  text-shadow: 5px 4px 11px rgba(0, 0, 0, 0.26);
+  letter-spacing: 1px;
+  color: #2f2f2f;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero-text h1:nth-child(2) {
+  font-weight: bold;
+  color: #5222d0;
+}
+
+.hero-text p,
+.our-services p,
+label {
+  font-size: 1.7rem;
+  letter-spacing: 0.2rem;
+  color: #777676;
+  text-transform: capitalize;
+  margin-top: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+.hero-text p span {
+  font-weight: bold;
+  color: #000;
+}
+
+.btn-style {
+  padding: 12px 25px;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid #fff;
+  background: #ec615b;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+/* about us style starts  */
+
+.about-style {
+  margin: 5rem 0;
+}
+
+.about-style .main-heading,
+.service-style .main-heading,
+.faq-style .main-heading,
+.team-style .main-heading {
+  font-size: 5rem;
+  color: #fd5c63;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-family: "Poiret One", cursive;
+
+}
+.faq-style .container{
+  margin-top: 25px;
+}
+
+.about-style .sub-heading,
+.service-style .sub-heading
+ {
+  font-size: 2rem;
+  letter-spacing: 3px;
+  line-height: 2;
+  color:black;
+  font-weight:bold;
+  background-color:gainsboro;
+  border-radius: 10px;
+  
+}
+
+
+
+
+.service-style {
+  margin-bottom: 10rem;
+}
+
+.box {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.our-services {
+  margin-top: 75px;
+  padding-bottom: 30px;
+  padding: 0 30px;
+  min-height: 198px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 0 25px 0 rgba(20, 27, 202, 0.17);
+}
+
+.our-services .icon {
+  margin-bottom: -21px;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.our-services h4 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.our-services:hover h4,
+.our-services:hover p {
+  color: #fff;
+}
+
+.speedup:hover {
+  box-shadow: 0 0 25px 0 rgba(33, 39, 221, 0.2);
+  cursor: pointer;
+  background-image: linear-gradient(-45deg, #f33474 0%, #f55b2a 50%);
+}
+
+.settings:hover {
+  box-shadow: 0 0 25px 0 rgba(20, 27, 201, 0.2);
+  cursor: pointer;
+  background-image: linear-gradient(-45deg, #49d0da 0%, #210c59 50%);
+}
+
+.privacy:hover {
+  box-shadow: 0 0 25px 0 rgba(20, 27, 201, 0.2);
+  cursor: pointer;
+  background-image: linear-gradient(-45deg, #5035ec 0%, #44a2f6 50%);
+}
+
+.backups:hover {
+  box-shadow: 0 0 25px 0 rgba(20, 27, 201, 0.2);
+  cursor: pointer;
+  background-image: linear-gradient(-45deg, #fd7f30 0%, #fdb642 50%);
+}
+
+.ssl:hover {
+  box-shadow: 0 0 25px 0 rgba(20, 27, 201, 0.2);
+  cursor: pointer;
+  background-image: linear-gradient(-45deg, #974eff 0%, #5a57fb 50%);
+}
+
+.database:hover {
+  box-shadow: 0 0 25px 0 rgba(20, 27, 201, 0.2);
+  cursor: pointer;
+  background-image: linear-gradient(-45deg, #27b88d 0%, #22dd73 50%);
+}
+
+.team-section
+{
+	background: #f1f2f6;
+	text-align: center;
+  
+}
+
+.inner-width
+{
+	max-width: 958px;
+	margin: auto;
+	padding: 20px;
+	color: #333;
+	overflow: hidden;
+}
+
+.team-section h1
+{
+	font-size: 5rem;
+  font-family: "Poiret One", cursive;
+	text-transform: uppercase;
+	display: inline-block;
+	padding-bottom: 5px;
+  font-weight: bold;
+}
+
+.pe
+{
+	float: left;
+	width: calc(100% / 3);
+	overflow: hidden;
+	padding: 2px 0;
+	transition: 0.4s;
+}
+
+.pe:hover
+{
+	background: #f89196;
+}
+
+.pe img
+{
+	width:250px;
+	height: 250px;
+	border-radius: 50%;
+}
+
+.p-name
+{
+  font-size: 30px;
+	margin: 7px;
+  font-family: "Poiret One", cursive;
+	text-transform: uppercase;
+}
+
+.p-des
+{
+  font-size: 25px;
+  font-family: "Poiret One", cursive;
+	color: #3498db;
+}
+
+.p-sm
+{
+	margin-top: 6px;
+}
+
+.p-sm a
+{
+	margin: 0 4px;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	transition: 0.4s;
+}
+
+.p-sm a:hover
+{
+	transform: scale(1.3);
+}
+
+.p-sm a i
+{
+	color: #333;
+	line-height: 30px;
+}
+
+@media screen and (max-width: 960px) {
+	.pe{
+		width: 45%;
+	}
+}
+@media screen and (max-width: 768px) {
+	.pe{
+		width: 50%;
+	}
+}
+@media screen and (max-width: 600px) {
+	.pe{
+		width: 100%;
+	}
+}
+/*faq*/
+
+.panel-title > a:before {
+    float: right !important;
+    font-family: FontAwesome;
+    content:"\f068";
+    padding-right: 5px;
+}
+body{
+  background-color:#f5f5f5;
+  
+}
+.panel-title > a.collapsed:before {
+    float: right !important;
+    content:"\f067";
+}
+.panel-title > a:hover, 
+.panel-title > a:active, 
+.panel-title > a:focus  {
+    text-decoration:none;
+}
+.panel-heading {
+  padding-top: 20px;
+    padding: 20px 15px;
+    border-bottom: 1px solid transparent;
+
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.panel {
+    margin-bottom: 30px !important;
+    background-color: #ffffff;
+    font-size: medium;
+    border: 1px solid transparent;
+    -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+    box-shadow: 15px 16px 13px 8px rgb(4 4 4 / 5%);
+}
+.jumbotron {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    color: inherit;
+    background-color: #00bcd4;
+    text-align: center;
+    color: #fff;
+}
+
+
+
+footer {
+  background: rgb(221, 217, 217);
+}
+
+footer p {
+  padding: 1rem 0;
+  margin: 0;
+  text-align: center;
+}
+
+
+
+@media (max-width: 768px) {
+  #logo {
+    font-size: 2.5rem;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  figure {
+    margin: 5rem 0;
+  }
+   
+  figure img {
+    min-width: 50%;
+  }
+ 
+  .hero-text p,
+  .our-services p,
+  label {
+    font-size: 1.5rem;
+  }
+
+  .about-style .sub-heading,
+  .service-style .sub-heading,
+  .contact-style .sub-heading {
+    font-size: 1rem;
+  
+  }
+  * {
+  font-family: "Poiret One", cursive;
+  font-weight: bold;
+}
+
+}
+</style>
+<title>Document</title>
+</head>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <title>Donation Website</title>
+<!-- Latest compiled and minified CSS -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    
+  <div class="container-fluid navbar-style py-3 ">
+    <div class="row">
+      <div class="col-md-10 col-12 mx-auto">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/" id="logo">HelpIndia</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="#aboutid">about</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#serviceid">service</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#FAQs">FAQs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#Teamid">Team</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+    <!-- Hero section start-->
+    <div class="container_fluid mt-5">
+      <div class="row">
+        <div class="col-md-12 col-12 mx-auto">
+          <div class="row">
+            <div
+              class="col-md-6 col-12 hero-text order-md-0 order-1 d-flex justify-content-center aligh-items-start flex-column">
+              <h1>India's Most Trusted</h1>
+              <h1>Disaster Relief NGO</h1>
+              <p >You may feel like a drop in the bucket. But every drop counts!</p>
+              
+              
+              <!--<button class="btn-style btn-primary">Read More</button>-->
+              <form action="payment" method="POST">
+                  <script src="//checkout.stripe.com/v2/checkout.js" class="stripe-button" data-key="<%= key %>"
+                      data-amount="10000" data-currency="INR" data-name="HelpIndia" data-description="Donate today" data-local="auto">
+                      </script>
+              </form>
+              
+            </div>
+            <!--right side-->
+            <div class="col-md-6 col-12 hero-text order-md-1 order-0">
+              
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="https://media.istockphoto.com/photos/closeup-of-disaster-relief-sign-at-center-handing-out-water-picture-id180709503?k=6&m=180709503&s=612x612&w=0&h=BjEuPkeFBunSAyQJaR_bRu2AszILMxlMNLSe-5mIKiA=">
+                   </div>
+                    <div class="carousel-item ">
+                        <img src="https://images.unsplash.com/photo-1617494532490-297fc0eb515e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" class="d-block w-100" alt="...">
+                    </div>
+                    
+                    <div class="carousel-item">
+                      <img src="https://www.aljazeera.com/wp-content/uploads/2020/04/39f5530087e847939a0c93b1881bd035_18.jpeg?fit=1000%2C561" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                     <img src="https://missionhelpers.files.wordpress.com/2015/06/help-14-un-helping-people.jpg">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://s3.amazonaws.com/utep-uploads/wp-content/uploads/eku/2018/11/28164401/NaturalDisasters-500x333.jpg">
+                 </div>
+                 <div class="carousel-item">
+                  <img src="http://www.catering-accounting.co.uk/wp-content/uploads/2017/11/shutterstock_551643799.jpg" class="d-block w-100" alt="...">
+                </div>
+                 
+                </div>
+              
+            </div>
+          </div>
+  
+        </div>
+  
+      </div>
+    </div>
+  
+    <!-- Hero section end-->
+    
+    <!-- about us start-->
+  <div class="container_fluid mt-5 about-style" id="aboutid">
+    <div class="row">
+      <div class="col-md-12 col-12 mx-auto">
+        <h1 class="text-center main-heading">About Us</h1>
+        <br>
+        <br>
+        
+        <p class="text-center sub-heading"><span class="bold-style">Be a part of change in the world</span>
+          <br>
+          Help India is an organisation providing disaster response and preparedness services.
+          <br>
+          As a disaster relief agency, we help people to survive and rebuild their lives through food, medical, education, shelter and livelihood programs.
+        <br>
+          Our most recent interventions in Maharashtra, Karnataka and Assam have impacted thousands of lives. In the face of a crisis often the difference between life and death is immediate access to relief items. We are a pioneer in delivering life saving relief supplies on time at scale. Help us to do more</p>
+    
+      </div>
+
+    </div>
+  </div>
+  <!-- about us end-->
+
+  <!--services starts here-->
+  <div class="container_fluid mt-5 about-style" id="serviceid">
+    <div class="row">
+        <div class="col-md-10 col-12 mx-auto">
+            <h1 class="text-center main-heading">Our Services</h1>
+          
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="our-services settings">
+                            <div class="icon">
+                                <img src="https://i.imgur.com/6NKPrhO.png">
+                            </div>
+                            <h4>Food Packets (meals)</h4>
+                            <p>2,14,000+ </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="our-services speedup">
+                            <div class="icon">
+                                <img src="https://i.imgur.com/v6OnUqu.png">
+                            </div>
+                            <h4>Relief Kits (dry ration)</h4>
+                            <p>42,600 </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="our-services privacy">
+                            <div class="icon">
+                                <img src="https://i.imgur.com/vdH9LKi.png">
+                            </div>
+                            <h4>Bed Kits (sleeping mat and blanket)</h4>
+                            <p>9,800</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                  <div class="box">
+                      <div class="our-services ssl">
+                          <div class="icon">
+                              <img src="https://i.imgur.com/VzjZw9M.png">
+                          </div>
+                          <h4>Medical Camps</h4>
+                          <p>144 </p>
+                      </div>
+                  </div>
+
+              </div>
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="our-services backups">
+                            <div class="icon">
+                                <img src="https://i.imgur.com/v6OnUqu.png">
+                            </div>
+                            <h4>Education Kits (bag & notebooks)</h4>
+                            <p>6,500+</p>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="our-services database">
+                            <div class="icon">
+                                <img src="https://i.imgur.com/AgyneKA.png">
+                            </div>
+                            <h4>Hygiene Kits </h4>
+                            <p>23,400 </p>
+                        </div>
+                    </div>
+
+                </div>
+                
+             </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<!--services ends here-->
+ <!-- FAQ section start-->
+<div class="row " id="FAQs" >
+  <div class="col-md-10 col-12 mx-auto faq-style">
+      <h1 class="text-center main-heading">Frequently Asked Questions</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Is the donated amount rightly used for Needy People?
+              </a>
+            </h4>
+
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">To ensure that the donor is rightly informed about the expenditure of their donations, we will follow a strict post-donation procedure and bills for the same will be duly shared. 
+</div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingTwo">
+            <h4 class="panel-title">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                What’s better, monetary donations or usable items?
+              </a>
+            </h4>
+
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div class="panel-body">
+              Both types of charity are beneficial as far as the Tax benefits are concerned. For people who can make time, we suggest them to personally visit the NGO and make their contribution of any type. Either money or items or time.
+</div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingThree">
+            <h4 class="panel-title">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                How can we donate food, old books and other usable items?
+              </a>
+            </h4>
+
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div class="panel-body">For that you need to contact our NGO, after that our volunteers will come to your place and collect the items. </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    </div>
+  </div>
+</div>
+ <!-- FAQ section ends-->
+<!--team section start-->
+  
+  <div id="Teamid">
+    <div class="team-section">
+        <div class="inner-width team-style">
+          <h1 class="main-heading"style="font-size: 5rem;color: #fd5c63;letter-spacing: 1px;font-weight: bold;text-decoration: none;">Meet our team </h1>
+          <div class="pers">
+            
+    
+            <div class="pe">
+              <img src="https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="rafeh">
+              <div class="p-name">Devin Smith</div>
+              <div class="p-des">Director</div>
+              <div class="p-sm">
+                <a href="#"><i class="fa fa-facebook-f"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+              </div>
+            </div>
+    
+            <div class="pe">
+              <img src="https://images.unsplash.com/photo-1619895862022-09114b41f16f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="rafeh">
+              <div class="p-name"> Jenny Roy</div>
+              <div class="p-des">Accountant</div>
+              <div class="p-sm">
+                <a href="#"><i class="fa fa-facebook-f"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>	
+              </div>
+            </div>
+    
+            <div class="pe">
+              <img src="https://images.unsplash.com/photo-1562788869-4ed32648eb72?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bmdvJTIwZGlyZWN0b3J8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="rafeh">
+              <div class="p-name">John Martin</div>
+              <div class="p-des">Manager</div>
+              <div class="p-sm">
+                <a href="#"><i class="fa fa-facebook-f"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+              </div>
+            </div>
+    
+    
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- Teams ends here -->
+      <!-- footer section start-->
+<footer class="text-center text-white" style="background-color: #caced1;">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); color: #000;font-size:medium;font-weight:bolder;">
+    © 2021 Copyright: HelpIndia
+  </div>
+  <!-- Copyright -->
+</footer>
+ <!--footer section ends-->
+</body>
+
+</html>
